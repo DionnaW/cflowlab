@@ -89,3 +89,26 @@ console.log('----------')
 const requiredArea = requiredCapacity / Pl;
 const requiredRadius = Math.sqrt(requiredArea / Pl);
 console.log(requiredRadius);
+console.log('----------')
+
+//Part3
+//this part is confusing, worked it but not sure how i got the output
+//can you give feedback please?
+try {
+    const requiredSpacePerPlant = 0.8;
+    const startingNumberOfPlants = 100;
+    const requiredCapacity = requiredSpacePerPlant * startingNumberOfPlants;
+
+    const maximumCapacity = Math.floor(startingArea / requiredSpacePerPlant);
+
+    if (requiredCapacity > startingArea) {
+        throw new Error("Insufficient space available to hold the provided number of plants.");
+    }
+
+    const requiredArea = requiredCapacity / Pl;
+    const requiredRadius = Math.sqrt(requiredArea / Pl);
+
+    console.log("The radiusof the expanded garden would be:", requiredRadius);
+}   catch(error) {
+    console.error(error.message);
+}
